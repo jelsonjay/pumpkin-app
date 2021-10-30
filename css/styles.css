@@ -6,7 +6,7 @@
 }
 
 :root {
-	--clr-bg: hsl(0, 6%, 10%);
+	--clr-bg: hsl(0, 19%, 91%);
 	--clr-white: hsl(0, 0%, 96%);
 	--clr-coral: hsl(16, 100%, 66%);
 	--clr-fire: radial-gradient(circle at 50% 20%, orange 0, orangered 100%);
