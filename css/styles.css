@@ -44,6 +44,11 @@ h1 {
 	color: var(--clr-font);
 	letter-spacing: 2px;
 	text-shadow: 12px 2px 4px #fff;
+	top: 20%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	animation: textRotate 5s ease-in 1, bounceText 2s 5s ease-in-out 1;
 }
 h2 {
 	font-family: 'Creepster', cursive;
@@ -60,12 +65,19 @@ h2 {
 }
 /*========CONTAINER==========*/
 .container {
-	display: flex;
 	overflow: hidden;
 	font-family: 'Nosifer', cursive;
-	margin: 0 auto;
-	justify-content: center;
-	align-items: center;
+	border: 4rem solid coral;
+	width: 70%;
+	height: 90%;
+	padding: 1rem;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	border-image: url('../images/pumpkin.png');
+	border-image-slice: 33%;
+	border-image-repeat: round;
 }
 /*=====PUMPKIN HELLOWEEN=======*/
 .pumpkin {
@@ -76,7 +88,7 @@ h2 {
 	height: 200px;
 	background-color: #f18b36;
 	border-radius: 80px;
-	margin: 8rem auto;
+	margin: 15rem auto;
 	background-image: linear-gradient(
 		to right,
 		var(--clr-skin-1) 50%,
@@ -201,5 +213,28 @@ h2 {
 	}
 	95% {
 		background: var(--clr-flicker-2);
+	}
+}
+
+@keyframes textRotate {
+	0% {
+		font-size: 0px;
+		transform: rotate(0deg);
+	}
+	100% {
+		font-size: 70px;
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes bounceText {
+	0% {
+		font-size: 70px;
+	}
+	30% {
+		font-size: 100px;
+	}
+	100% {
+		font-size: 70px;
 	}
 }
